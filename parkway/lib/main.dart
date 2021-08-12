@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:parkway/presentation/chat.dart';
+import 'package:parkway/presentation/on_boarding.dart';
+import 'package:parkway/presentation/sign_up.dart';
 
 void main() {
   runApp(MyApp());
@@ -10,12 +12,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
+      title: 'ParkWay',
+      debugShowCheckedModeBanner: false,
 
+      theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home:Chat(),
+      home:SignUp(),
     );
   }
 
