@@ -11,7 +11,7 @@ class Chat extends StatefulWidget {
 class _ChatState extends State<Chat> {
 
 
-  late List<UserChat> chats;
+   List<UserChat> chats;
 
 
   @override
@@ -133,7 +133,7 @@ class _ChatState extends State<Chat> {
 
 
 
-  Widget ChatList({required String name,required String image,required String message,required String offtime, required bool isOnline, })=>Container(
+  Widget ChatList({@required String name,@required String image,@required String message,@required String offtime, @required bool isOnline, })=>Container(
     margin:const EdgeInsets.only( top: 10),
     padding:const EdgeInsets.symmetric(vertical: 5,horizontal: 20),
     child: Row(
@@ -233,7 +233,7 @@ class UserChat {
  final String name,image,message,offtime;
   final bool isOnline;
 
-  UserChat( {required this.name, required this.image,required this.message,required this.offtime, required this.isOnline});
+  UserChat( {@required this.name, @required this.image,@required this.message,@required this.offtime,@required this.isOnline});
 
 
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_icons/flutter_icons.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Home extends StatefulWidget {
@@ -11,7 +12,9 @@ class _HomeState extends State<Home> {
 
 
 
-  late List<DogWalker> walkers;
+   List<DogWalker> walkers;
+
+   int activeIndex =0;
 
 
   @override
@@ -20,12 +23,16 @@ class _HomeState extends State<Home> {
     super.initState();
 
 
+
     walkers =[
-      DogWalker(name: "Mason York", image: "assets/images/Frame 33575.png", distance: "7 km from you", charges: "3", rating: "4.2"),
-      DogWalker(name: "Mark Greene", image: "assets/images/Component 1.png", distance: "14 km from you", charges: "6", rating: "6.2"),
-      DogWalker(name: "Mark Greene", image: "assets/images/Frame 33546.png", distance: "2 km from you", charges: "5", rating: "4.2"),
-      DogWalker(name: "Trina Kain", image: "assets/images/Component 4.png", distance: "4 km from you", charges: "8", rating: "5.2"),
+      DogWalker(name: "Mason York", image: "assets/images/Frame 33575.png", distance: "7 km from you", charges: "\$3/h"),
+      DogWalker(name: "Mark Greene", image: "assets/images/Frame 33575.png", distance: "14 km from you", charges: "\$6h", ),
+      DogWalker(name: "Mark Greene", image: "assets/images/Frame 33546.png", distance: "2 km from you", charges: "\$5h",),
+      DogWalker(name: "Trina Kain", image: "assets/images/Frame 33546.png", distance: "4 km from you", charges: "\$8h", ),
     ];
+
+
+
 
   }
 
@@ -35,7 +42,7 @@ class _HomeState extends State<Home> {
     return Scaffold(
 
       body: Container(
-        margin: EdgeInsets.symmetric(vertical: 20,horizontal: 20),
+        margin: EdgeInsets.symmetric(vertical: MediaQuery.of(context).size.height * 0.05,horizontal: 20),
         child: Column(
           children: [
 
@@ -200,15 +207,26 @@ class _HomeState extends State<Home> {
                       ),
 
                       Container(
-                        height: MediaQuery.of(context).size.height * 0.2,
+                        height: MediaQuery.of(context).size.height * 0.25,
 
                         child: ListView(
+                          shrinkWrap: true,
+                          scrollDirection: Axis.horizontal,
+                          children: List.generate(walkers.length, (index) => WalkerContainer(name: walkers[index].name,
+                              image: walkers[index].image, distance: walkers[index].distance, charges: walkers[index].charges)),
 
                         ),
                       ),
 
                       Container(
-                        margin: EdgeInsets.only( top: 20),
+                        height: 2,
+                        color: Colors.grey.shade300,
+                        padding: EdgeInsets.all(1),
+                        margin: EdgeInsets.symmetric(vertical: 7),
+                      ),
+
+                      Container(
+                        margin: EdgeInsets.symmetric( vertical: 20),
 
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -240,6 +258,18 @@ class _HomeState extends State<Home> {
 
                       ),
 
+                      Container(
+                        height: MediaQuery.of(context).size.height * 0.25,
+
+                        child: ListView(
+                          shrinkWrap: true,
+                          scrollDirection: Axis.horizontal,
+                          children: List.generate(walkers.length, (index) => WalkerContainer(name: walkers[index].name,
+                              image: walkers[index].image, distance: walkers[index].distance, charges: walkers[index].charges)),
+
+                        ),
+                      ),
+
                     ],
 
 
@@ -253,37 +283,134 @@ class _HomeState extends State<Home> {
         ),
       ),
 
+      bottomNavigationBar: BottomNavigationBar(
+        elevation: 0,
+         currentIndex: activeIndex,
+         iconSize: 25,
+         type: BottomNavigationBarType.fixed,
+         onTap: (index){
+          activeIndex = index;
+          setState(() {});
+          },
+         selectedItemColor:Colors.black,
+        unselectedItemColor: Colors.grey.shade500,
+        selectedLabelStyle: GoogleFonts.poppins(
+          color: Colors.black
+        ),
+        showUnselectedLabels: true,
+        unselectedLabelStyle: GoogleFonts.poppins(
+         color: Colors.grey.shade500,
+        ),
+        items: [
+
+          BottomNavigationBarItem(
+            icon: Icon(Entypo.home,),
+            label:'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Ionicons.ios_people),
+           label:'Moments',
+          ),
+          BottomNavigationBarItem(
+              icon: Icon(
+                  FontAwesome.send,
+              ),
+             label: 'Chat'
+          ),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.person,),
+              label: 'Profile'
+          )
+
+          
+        ],
+      ),
+
     );
   }
 
 
-  Widget WalkerContainer({required String name,required String image,required String distance,required String charges,required String rating})=>Container(
+  Widget WalkerContainer({@required String name,@required String image,@required String distance,@required String charges})=>Container(
+
+    width: 220,
+    margin: EdgeInsets.only(right: 30),
     child: Column(
       children: [
 
         Container(
           height: 150,
-          width: 300,
-          child: Container(
-            child: Row(
-              children: [
-                Icon(Icons.star,
-                  color: Color(0xffFFCB55),),
-                Text(
-                  rating,
-                  style: GoogleFonts.poppins(
-                      color: Color(0xffFFCB55),
-                      fontSize: 14
-                  ),
-                )
-              ],
-            ),
-          ),
+          width: 250,
           decoration: BoxDecoration(
+              borderRadius: BorderRadius.all(Radius.circular(10)),
               image: DecorationImage(
                   fit: BoxFit.fill,
                   image: AssetImage(image)
               )
+          ),
+        ),
+
+        Container(
+
+          margin: EdgeInsets.only(top: 10),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+
+            Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+
+                Container(
+                  child: Text(
+                    name,
+                    style: GoogleFonts.poppins(
+                        color: Color(0xff2B2B2B),
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16
+                    ),
+                  ),
+                ),
+                Container(
+                  child: Row(
+                    children: [
+                      Icon(Icons.location_on_outlined,color: Colors.grey, size: 16,),
+                      Text(
+                        distance,
+                        style: GoogleFonts.poppins(
+                            color: Color(0xffA1A1A1),
+                            fontWeight: FontWeight.w500,
+                            fontSize: 14
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+
+
+              Container(
+                width: 60,
+                alignment: Alignment.center,
+                padding: EdgeInsets.all(7),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(9)),
+                  color: Colors.black
+                ),
+                child: Text(
+                  charges,
+                  style: GoogleFonts.poppins(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w600,
+                      fontSize: 14
+                  ),
+                ),
+              ),
+
+
+            ],
           ),
         )
 
@@ -298,8 +425,8 @@ class _HomeState extends State<Home> {
 
 class DogWalker{
 
-  final String name, image,distance, charges,rating;
+  final String name, image,distance, charges;
 
-  DogWalker({ required this.name,required this.image,required this.distance,required this.charges,required this.rating});
+  DogWalker({ @required this.name,@required this.image,@required this.distance,@required this.charges,});
 
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:parkway/presentation/Profile.dart';
 import 'package:parkway/presentation/chat.dart';
 import 'package:parkway/presentation/home.dart';
 import 'package:parkway/presentation/on_boarding.dart';
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home:Home(),
+      home:Profile(),
     );
   }
 
