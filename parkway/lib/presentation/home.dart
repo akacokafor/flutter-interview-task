@@ -14,10 +14,8 @@ class _HomeState extends State<Home> {
 
    List<DogWalker> walkers;
 
-   int activeIndex =0;
 
-
-  @override
+   @override
   void initState() {
     // TODO: implement initState
     super.initState();
@@ -65,7 +63,7 @@ class _HomeState extends State<Home> {
                                 style: GoogleFonts.poppins(
                                     color: Colors.black,
                                     fontWeight: FontWeight.w700,
-                                    fontSize: 24),
+                                    fontSize: 22),
                               ),
                             ),
                             Container(
@@ -74,8 +72,8 @@ class _HomeState extends State<Home> {
                                 overflow: TextOverflow.ellipsis,
                                 style: GoogleFonts.poppins(
                                     color: Color(0xffB0B0B0),
-                                    fontWeight: FontWeight.w700,
-                                    fontSize: 18),
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: 14),
                               ),
                             ),
 
@@ -174,7 +172,7 @@ class _HomeState extends State<Home> {
                     children: [
 
                       Container(
-                        margin: EdgeInsets.only( top: 10),
+                        margin: EdgeInsets.symmetric(vertical: 10),
 
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -185,8 +183,8 @@ class _HomeState extends State<Home> {
                                 overflow: TextOverflow.ellipsis,
                                 style: GoogleFonts.poppins(
                                     color: Colors.black,
-                                    fontWeight: FontWeight.w700,
-                                    fontSize: 23),
+                                    fontWeight: FontWeight.w600,
+                                    fontSize: 22),
                               ),
                             ),
 
@@ -207,8 +205,7 @@ class _HomeState extends State<Home> {
                       ),
 
                       Container(
-                        height: MediaQuery.of(context).size.height * 0.25,
-
+                        height: MediaQuery.of(context).size.height * 0.3,
                         child: ListView(
                           shrinkWrap: true,
                           scrollDirection: Axis.horizontal,
@@ -222,11 +219,10 @@ class _HomeState extends State<Home> {
                         height: 2,
                         color: Colors.grey.shade300,
                         padding: EdgeInsets.all(1),
-                        margin: EdgeInsets.symmetric(vertical: 7),
                       ),
 
                       Container(
-                        margin: EdgeInsets.symmetric( vertical: 20),
+                        margin: EdgeInsets.symmetric( vertical: 10),
 
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -237,8 +233,8 @@ class _HomeState extends State<Home> {
                                 overflow: TextOverflow.ellipsis,
                                 style: GoogleFonts.poppins(
                                     color: Colors.black,
-                                    fontWeight: FontWeight.w700,
-                                    fontSize: 23),
+                                    fontWeight: FontWeight.w600,
+                                    fontSize: 22),
                               ),
                             ),
 
@@ -259,8 +255,7 @@ class _HomeState extends State<Home> {
                       ),
 
                       Container(
-                        height: MediaQuery.of(context).size.height * 0.25,
-
+                        height: MediaQuery.of(context).size.height * 0.3,
                         child: ListView(
                           shrinkWrap: true,
                           scrollDirection: Axis.horizontal,
@@ -283,49 +278,6 @@ class _HomeState extends State<Home> {
         ),
       ),
 
-      bottomNavigationBar: BottomNavigationBar(
-        elevation: 0,
-         currentIndex: activeIndex,
-         iconSize: 25,
-         type: BottomNavigationBarType.fixed,
-         onTap: (index){
-          activeIndex = index;
-          setState(() {});
-          },
-         selectedItemColor:Colors.black,
-        unselectedItemColor: Colors.grey.shade500,
-        selectedLabelStyle: GoogleFonts.poppins(
-          color: Colors.black
-        ),
-        showUnselectedLabels: true,
-        unselectedLabelStyle: GoogleFonts.poppins(
-         color: Colors.grey.shade500,
-        ),
-        items: [
-
-          BottomNavigationBarItem(
-            icon: Icon(Entypo.home,),
-            label:'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Ionicons.ios_people),
-           label:'Moments',
-          ),
-          BottomNavigationBarItem(
-              icon: Icon(
-                  FontAwesome.send,
-              ),
-             label: 'Chat'
-          ),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.person,),
-              label: 'Profile'
-          )
-
-          
-        ],
-      ),
-
     );
   }
 
@@ -338,8 +290,8 @@ class _HomeState extends State<Home> {
       children: [
 
         Container(
-          height: 150,
-          width: 250,
+          height: MediaQuery.of(context).size.height * 0.18,
+          width: 220,
           decoration: BoxDecoration(
               borderRadius: BorderRadius.all(Radius.circular(10)),
               image: DecorationImage(
@@ -351,7 +303,7 @@ class _HomeState extends State<Home> {
 
         Container(
 
-          margin: EdgeInsets.only(top: 10),
+          margin: EdgeInsets.only(top: 8),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -367,8 +319,8 @@ class _HomeState extends State<Home> {
                     name,
                     style: GoogleFonts.poppins(
                         color: Color(0xff2B2B2B),
-                        fontWeight: FontWeight.bold,
-                        fontSize: 16
+                        fontWeight: FontWeight.w700,
+                        fontSize: 15
                     ),
                   ),
                 ),
@@ -380,7 +332,7 @@ class _HomeState extends State<Home> {
                         distance,
                         style: GoogleFonts.poppins(
                             color: Color(0xffA1A1A1),
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w400,
                             fontSize: 14
                         ),
                       ),
@@ -403,7 +355,7 @@ class _HomeState extends State<Home> {
                   charges,
                   style: GoogleFonts.poppins(
                       color: Colors.white,
-                      fontWeight: FontWeight.w600,
+                      fontWeight: FontWeight.w500,
                       fontSize: 14
                   ),
                 ),

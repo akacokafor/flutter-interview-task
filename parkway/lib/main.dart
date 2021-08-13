@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:parkway/presentation/Profile.dart';
-import 'package:parkway/presentation/chat.dart';
-import 'package:parkway/presentation/home.dart';
-import 'package:parkway/presentation/on_boarding.dart';
-import 'package:parkway/presentation/sign_up.dart';
+import 'package:parkway/presentation/Dashboard.dart';
 
 void main() {
   runApp(MyApp());
@@ -19,8 +15,9 @@ class MyApp extends StatelessWidget {
 
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home:Profile(),
+      home:DashBoard(),
     );
   }
 

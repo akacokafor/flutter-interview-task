@@ -163,12 +163,13 @@ class _ChatState extends State<Chat> {
                             overflow: TextOverflow.ellipsis,
                             style: GoogleFonts.poppins(
                                 color: Colors.black,
-                                fontWeight: FontWeight.w800,
-                                fontSize: 18),
+                                fontWeight: FontWeight.w700,
+                                fontSize: 16),
                           ),
                         ),
 
                         Container(
+                          margin: EdgeInsets.only(top: 4),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -181,7 +182,7 @@ class _ChatState extends State<Chat> {
                                   style: GoogleFonts.poppins(
                                       color: Colors.black,
                                       fontWeight: FontWeight.w400,
-                                      fontSize: 16),
+                                      fontSize: 14),
                                 ),
                               ),
                               Container(
@@ -190,8 +191,8 @@ class _ChatState extends State<Chat> {
                                   offtime,
                                   style: GoogleFonts.poppins(
                                       color: Colors.black,
-                                      fontWeight: FontWeight.w400,
-                                      fontSize: 16),
+                                      fontWeight: FontWeight.w300,
+                                      fontSize: 14),
                                 ),
                               ),
                             ],

@@ -23,7 +23,7 @@ class _ProfileState extends State<Profile> {
               child: Container(
                 height:MediaQuery.of(context).size.height * 0.5,
                 width: MediaQuery.of(context).size.width,
-                padding:EdgeInsets.symmetric(vertical:MediaQuery.of(context).size.height * 0.05, horizontal: 30 ) ,
+                padding:EdgeInsets.symmetric(vertical:MediaQuery.of(context).size.height * 0.05, horizontal: 20 ) ,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -103,7 +103,7 @@ class _ProfileState extends State<Profile> {
                       topRight: Radius.circular(30),
                     )
                   ),
-                  padding: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width* 0.05),
+                  padding: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width* 0.05,vertical: 5),
 
                   child: SingleChildScrollView(
                     child: Column(
@@ -198,13 +198,13 @@ class _ProfileState extends State<Profile> {
 
                               Container(
                                 padding: EdgeInsets.all(10),
-                                width: 100,
+                                width: 90,
                                 alignment: Alignment.center,
                                 child: Text("About",
                                   style: GoogleFonts.poppins(
                                       color: Colors.white,
                                       fontWeight: FontWeight.w600,
-                                      fontSize: 15
+                                      fontSize: 14
                                   ),),
                                 decoration: BoxDecoration(
                                     color: Colors.black,
@@ -214,13 +214,13 @@ class _ProfileState extends State<Profile> {
                               ),
                               Container(
                                 padding: EdgeInsets.all(10),
-                                width: 100,
+                                width: 90,
                                 alignment: Alignment.center,
                                 child: Text("Location",
                                   style: GoogleFonts.poppins(
                                       color: Color(0xffB0B0B0),
                                       fontWeight: FontWeight.w600,
-                                      fontSize: 15
+                                      fontSize: 14
                                   ),),
                                 decoration: BoxDecoration(
                                     color: Color(0xffF5F5F5),
@@ -230,13 +230,13 @@ class _ProfileState extends State<Profile> {
                               ),
                               Container(
                                 padding: EdgeInsets.all(10),
-                                width: 100,
+                                width: 90,
                                 alignment: Alignment.center,
                                 child: Text("Review",
                                   style: GoogleFonts.poppins(
                                       color: Color(0xffB0B0B0),
                                       fontWeight: FontWeight.w600,
-                                      fontSize: 15
+                                      fontSize: 14
                                   ),),
                                 decoration: BoxDecoration(
                                     color: Color(0xffF5F5F5),
