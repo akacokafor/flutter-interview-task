@@ -3,12 +3,13 @@ import 'package:task/config/size-config.dart';
 
 class CustomButton extends StatelessWidget {
   final String text;
+  final Widget? icon;
   final Function() onpressed;
   final double? width;
   final Color? color;
 
   CustomButton(
-      {required this.text, required this.onpressed, this.width, this.color});
+      {required this.text, required this.onpressed, this.width, this.color, this.icon});
 
   @override
   Widget build(BuildContext context) {
@@ -29,19 +30,28 @@ class CustomButton extends StatelessWidget {
         elevation: 0,
         height: SizeConfig.heightMultiplier! * 5,
         minWidth:
-            width == null ? MediaQuery.of(context).size.width * 0.9 : width,
+            width == null ? MediaQuery.of(context).size.width * 0.8 : width,
         splashColor: Colors.white10,
         shape:
             RoundedRectangleBorder(borderRadius: new BorderRadius.circular(14)),
         onPressed: onpressed,
-        child: Text(
-          text,
-          style: TextStyle(
-            fontFamily: 'Poppins',
-            fontSize: SizeConfig.textMultiplier! * 2.3,
-            color: Colors.white,
-            fontWeight: FontWeight.w800,
-          ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            if(icon != null) Padding(
+              padding: EdgeInsets.only(right: SizeConfig.widthMultiplier!),
+              child: icon!
+              ),
+            Text(
+              text,
+              style: TextStyle(
+                fontFamily: 'Poppins',
+                fontSize: SizeConfig.textMultiplier! * 2.3,
+                color: Colors.white,
+                fontWeight: FontWeight.w800,
+              ),
+            ),
+          ],
         ),
         color: Colors.transparent,
       ),

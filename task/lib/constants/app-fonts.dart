@@ -73,21 +73,21 @@ class AppFonts {
   );
 
   static TextStyle heading4 = TextStyle(
-    fontSize: SizeConfig.textMultiplier! * 1.8,
+    fontSize: SizeConfig.textMultiplier! * 2,
     color: Colors.black,
     fontWeight: FontWeight.w700,
     fontFamily: 'Poppins',
   );
 
   static TextStyle body1 = TextStyle(
-    fontSize: SizeConfig.textMultiplier! * 1.8,
+    fontSize: SizeConfig.textMultiplier! * 2,
     fontWeight: FontWeight.w400,
     fontFamily: 'Poppins',
     color: Colors.black54,
   );
 
   static TextStyle body3 = TextStyle(
-    fontSize: SizeConfig.textMultiplier! * 1.3,
+    fontSize: SizeConfig.textMultiplier! * 1.5,
     fontWeight: FontWeight.w400,
     fontFamily: 'Poppins',
     color: Colors.black54,

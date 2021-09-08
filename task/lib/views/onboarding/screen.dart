@@ -70,7 +70,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         )
                       ),
                       Padding(
-                        padding: EdgeInsets.symmetric(vertical: SizeConfig.heightMultiplier! * 4),
+                        padding: EdgeInsets.symmetric(vertical: SizeConfig.heightMultiplier! * 4, horizontal: size.width * 0.05),
                         child: CustomButton(
                           text: 'Join Our Community', 
                           width: size.width * 0.8, 

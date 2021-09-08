@@ -4,6 +4,7 @@ import 'package:task/constants/app-colors.dart';
 import 'package:task/constants/app-fonts.dart';
 import 'package:task/constants/widgets/custom-button.dart';
 import 'package:task/constants/widgets/custom-input.dart';
+import 'package:task/views/home/screen.dart';
 
 class RegisterScreen extends StatefulWidget {
   static const routeName = '/register';
@@ -58,7 +59,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
     }
     _registerFormKey.currentState!.save();
     Navigator.of(context).pop();
-    // Navigator.of(context).popAndPushNamed();
+    Navigator.of(context).popAndPushNamed(HomeScreen.routeName);
   }
 
   @override
