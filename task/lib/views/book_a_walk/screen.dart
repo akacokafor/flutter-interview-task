@@ -3,9 +3,12 @@ import 'package:task/config/size-config.dart';
 import 'package:task/constants/app-fonts.dart';
 import 'package:task/constants/app-images.dart';
 import 'package:task/constants/widgets/custom-button.dart';
+import 'package:task/views/book_a_walk/widgets/row_item.dart';
+import 'package:task/views/book_a_walk/widgets/tab_container.dart';
+import 'package:task/views/chat/screen.dart';
 
 class BookAWalkScreen extends StatelessWidget {
-  static const routeName = 'book-a-walk';
+  static const routeName = '/book-a-walk';
   const BookAWalkScreen({ Key? key }) : super(key: key);
 
   @override
@@ -157,75 +160,13 @@ class BookAWalkScreen extends StatelessWidget {
                        SizedBox(
                     height: SizeConfig.heightMultiplier! * 4,
                   ),
-                  CustomButton(text: 'Check Schedule', onpressed: () {})
+                  CustomButton(text: 'Check Schedule', onpressed: () => Navigator.of(context).pushNamed(ChatScreen.routeName))
                 ],
               ),
             ),
           )
         ],
       ),
-    );
-  }
-}
-
-class TabContainer extends StatelessWidget {
-  const TabContainer({
-    Key? key,
-    required this.color,
-    required this.text,
-  }) : super(key: key);
-
-  final String text;
-  final Color color;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: SizeConfig.heightMultiplier! * 6,
-      width: SizeConfig.widthMultiplier! * 22,
-      decoration: BoxDecoration(
-        color: color,
-        borderRadius: BorderRadius.circular(15)
-      ),
-      child: Center(child: Text(text, style: AppFonts.heading3white,)),
-    );
-  }
-}
-
-class VerticalDivider extends StatelessWidget {
-  const VerticalDivider({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
-    return Container(
-      height: SizeConfig.heightMultiplier! * 2.5,
-      width: 1,
-      margin: EdgeInsets.symmetric(horizontal: size.width * 0.03),
-      color: Colors.grey,
-    );
-  }
-}
-
-class RowItem extends StatelessWidget {
-  const RowItem({
-    Key? key,
-    required this.firstText,
-    required this.secondText
-  }) : super(key: key);
-
-  final String firstText;
-  final String secondText;
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Text(firstText, style: AppFonts.heading4),
-        Text(secondText, style: AppFonts.body1)
-      ],
     );
   }
 }
