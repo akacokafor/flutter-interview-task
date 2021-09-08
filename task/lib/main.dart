@@ -6,6 +6,7 @@ import 'package:task/constants/app-fonts.dart';
 import 'package:task/constants/app-images.dart';
 import 'package:task/constants/widgets/custom-button.dart';
 import 'package:task/views/onboarding/screen.dart';
+import 'package:task/views/register/screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -27,6 +28,9 @@ class MyApp extends StatelessWidget {
           title: 'Flutter Interview Task',
           debugShowCheckedModeBanner: false,
           home: OnboardingScreen(),
+          routes: {
+            RegisterScreen.routeName: (ctx) => RegisterScreen(),
+          },
         );
       });
     });

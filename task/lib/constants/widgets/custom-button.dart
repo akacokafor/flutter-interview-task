@@ -37,9 +37,10 @@ class CustomButton extends StatelessWidget {
         child: Text(
           text,
           style: TextStyle(
-            fontFamily: 'Ubuntu',
-            fontSize: SizeConfig.textMultiplier! * 2,
+            fontFamily: 'Poppins',
+            fontSize: SizeConfig.textMultiplier! * 2.3,
             color: Colors.white,
+            fontWeight: FontWeight.w800,
           ),
         ),
         color: Colors.transparent,

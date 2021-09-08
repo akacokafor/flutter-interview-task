@@ -6,6 +6,7 @@ import 'package:task/constants/app-images.dart';
 import 'package:task/constants/widgets/custom-button.dart';
 import 'package:task/views/onboarding/widgets/center_line.dart';
 import 'package:task/views/onboarding/widgets/slider_circle.dart';
+import 'package:task/views/register/screen.dart';
 
 class OnboardingScreen extends StatefulWidget {
   OnboardingScreen({Key? key}) : super(key: key);
@@ -36,13 +37,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 ),
                 Container(
                   height: size.height * 0.35,
-                  padding: EdgeInsets.only(bottom: SizeConfig.heightMultiplier! * 2),
+                  padding: EdgeInsets.only(bottom: SizeConfig.heightMultiplier!, top: SizeConfig.heightMultiplier!),
                   decoration: BoxDecoration(
                     gradient: LinearGradient(
                       begin: Alignment.topCenter,
                       colors: <Color>[
-                        Colors.black.withOpacity(0.2),
-                        Colors.black.withOpacity(0.1)
+                        Colors.black.withOpacity(0),
+                        Colors.black.withOpacity(0.3)
                       ],
                     ),
                     // color: Colors.black.withOpacity(0.3)
@@ -73,7 +74,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         child: CustomButton(
                           text: 'Join Our Community', 
                           width: size.width * 0.8, 
-                          onpressed: () {}
+                          onpressed: () => Navigator.of(context).pushNamed(RegisterScreen.routeName)
                         ),
                       ),
                       Row(
