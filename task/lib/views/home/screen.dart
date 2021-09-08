@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -8,10 +6,13 @@ import 'package:task/constants/app-fonts.dart';
 import 'package:task/constants/app-images.dart';
 import 'package:task/constants/widgets/custom-button.dart';
 import 'package:task/constants/widgets/custom-input.dart';
+import 'package:task/views/book_a_walk/screen.dart';
 import 'package:task/views/home/widgets/bottom-nav.dart';
+import 'package:task/views/home/widgets/carousel-header.dart';
+import 'package:task/views/home/widgets/carousel-item.dart';
 
 class HomeScreen extends StatefulWidget {
-  static const routeName = '/home';
+  static const routeName = 'home';
   const HomeScreen({ Key? key }) : super(key: key);
 
   @override
@@ -58,8 +59,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             Text('Explore dog walkers', style: AppFonts.body1),
                           ],
                         ),
-                        CustomButton(text: 'Book a Walk', onpressed: () {}, width: size.width * 0.2, icon: Icon(Icons.add, color: Colors.white)),
-                        
+                        CustomButton(text: 'Book a Walk', onpressed: () => Navigator.of(context).pushNamed(BookAWalkScreen.routeName), width: size.width * 0.2, icon: Icon(Icons.add, color: Colors.white)),
                       ],
                     ),
                     SizedBox(
@@ -105,7 +105,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ],
               ),
               Padding(
-                padding: EdgeInsets.symmetric(vertical: SizeConfig.heightMultiplier! * 3, horizontal: size.width * 0.05),
+                padding: EdgeInsets.symmetric(vertical: SizeConfig.heightMultiplier! * 2, horizontal: size.width * 0.05),
                 child: Divider(
                   color: Colors.grey.shade700,
                 ),
@@ -143,96 +143,6 @@ class _HomeScreenState extends State<HomeScreen> {
             ]
           ),
         ),
-      ),
-    );
-  }
-}
-
-class CarouselHeader extends StatelessWidget {
-  const CarouselHeader({
-    Key? key,
-    required this.title,
-    required this.linkText,
-  }) : super(key: key);
-
-  final String title;
-  final String linkText;
-
-  @override
-  Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
-    return Padding(
-      padding: EdgeInsets.only(right: size.width * 0.05, left: size.width * 0.05),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Text(title, style: AppFonts.heading1),
-          Text(linkText, style: TextStyle(
-            decoration: TextDecoration.underline,
-            fontSize: SizeConfig.textMultiplier! * 2.2,
-            fontWeight: FontWeight.w400,
-            fontFamily: 'Poppins',
-            color: Colors.black87,
-          ))
-        ],
-      ),
-    );
-  }
-}
-
-class CarouselItem extends StatelessWidget {
-  const CarouselItem({
-    Key? key,
-    required this.image,
-  }) : super(key: key);
-
-  final String image;
-
-  @override
-  Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
-    return Padding(
-      padding: EdgeInsets.only(right: SizeConfig.widthMultiplier! * 8),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Container(
-            height: size.height * 0.2,
-            width: size.width,
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage(image),
-                fit: BoxFit.fill
-              )
-            )
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Column(
-                children: [
-                  Text('Mason York', style: AppFonts.heading4),
-                  Row(
-                    children: [
-                      Icon(Icons.location_on, color: Colors.grey.shade400,),
-                      Text('7km from you', style: AppFonts.body3),
-                    ],
-                  )
-                ],
-              ),
-              Container(
-                height: SizeConfig.heightMultiplier! * 4,
-                width: SizeConfig.widthMultiplier! * 12,
-                decoration: BoxDecoration(
-                  color: Colors.black87,
-                  borderRadius: BorderRadius.circular(8)
-                ),
-                child: Center(child: Text('\$3/h', style: AppFonts.body1white))
-              )
-            ],
-          )
-        ]
       ),
     );
   }

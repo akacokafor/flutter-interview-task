@@ -3,4 +3,5 @@ class AppImages {
   static const onboarding = 'assets/onboarding.png';
   static const firstSlide = 'assets/first_slide.png';
   static const secondSlide = 'assets/second_slide.png';
+  static const bookAWalk = 'assets/book_a_walk.png';
 }

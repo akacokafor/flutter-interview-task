@@ -7,7 +7,7 @@ import 'package:task/constants/widgets/custom-input.dart';
 import 'package:task/views/home/screen.dart';
 
 class RegisterScreen extends StatefulWidget {
-  static const routeName = '/register';
+  static const routeName = 'register';
   const RegisterScreen({ Key? key }) : super(key: key);
 
   @override
