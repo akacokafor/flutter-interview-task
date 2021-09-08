@@ -87,7 +87,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         carouselController: carouselController,
                         options: CarouselOptions(
                           height: size.height * 0.27,
-                          viewportFraction: 0.7,
+                          viewportFraction: 0.9,
                           enableInfiniteScroll: false,
                           // enlargeCenterPage: true,
                           initialPage: 0,
@@ -119,8 +119,9 @@ class _HomeScreenState extends State<HomeScreen> {
                         carouselController: carouselController,
                         options: CarouselOptions(
                           height: size.height * 0.27,
-                          viewportFraction: 0.7,
+                          viewportFraction: 0.9,
                           enableInfiniteScroll: false,
+                          disableCenter: true,
                           // enlargeCenterPage: true,
                           initialPage: 0,
                           onPageChanged: (index, reason) {
