@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:task/config/size-config.dart';
 import 'package:task/constants/app-colors.dart';
 import 'package:task/constants/app-fonts.dart';
-import 'package:task/constants/app-images.dart';
 import 'package:task/constants/widgets/custom-input.dart';
 import 'package:task/views/chat/screen.dart';
 import 'package:task/views/home/models/chat.dart';

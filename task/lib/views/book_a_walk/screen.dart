@@ -5,7 +5,6 @@ import 'package:task/constants/app-images.dart';
 import 'package:task/constants/widgets/custom-button.dart';
 import 'package:task/views/book_a_walk/widgets/row_item.dart';
 import 'package:task/views/book_a_walk/widgets/tab_container.dart';
-import 'package:task/views/chat/screen.dart';
 
 class BookAWalkScreen extends StatelessWidget {
   static const routeName = '/book-a-walk';

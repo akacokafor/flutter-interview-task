@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:task/constants/app-images.dart';
 
 class Chat {

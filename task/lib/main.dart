@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:task/config/size-config.dart';
-import 'package:task/constants/app-colors.dart';
-import 'package:task/constants/app-fonts.dart';
-import 'package:task/constants/app-images.dart';
-import 'package:task/constants/widgets/custom-button.dart';
 import 'package:task/views/book_a_walk/screen.dart';
 import 'package:task/views/chat/screen.dart';
 import 'package:task/views/home/screen.dart';
