@@ -31,10 +31,13 @@ class BookAWalkScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  CircleAvatar(
-                    backgroundColor: Colors.grey.shade100.withOpacity(0.5),
-                    radius: SizeConfig.imageSizeMultiplier! * 6,
-                    child: Icon(Icons.clear, color: Colors.white),
+                  GestureDetector(
+                    onTap: () => Navigator.of(context).pop(),
+                    child: CircleAvatar(
+                      backgroundColor: Colors.grey.shade100.withOpacity(0.5),
+                      radius: SizeConfig.imageSizeMultiplier! * 6,
+                      child: Icon(Icons.clear, color: Colors.white),
+                    ),
                   ),
                   Container(
                     width: SizeConfig.widthMultiplier! * 30,
@@ -160,7 +163,7 @@ class BookAWalkScreen extends StatelessWidget {
                        SizedBox(
                     height: SizeConfig.heightMultiplier! * 4,
                   ),
-                  CustomButton(text: 'Check Schedule', onpressed: () => Navigator.of(context).pushNamed(ChatScreen.routeName))
+                  CustomButton(text: 'Check Schedule', onpressed: () {})
                 ],
               ),
             ),

@@ -28,6 +28,11 @@ flutter:
     - assets/first_slide.png
     - assets/second_slide.png
     - assets/book_a_walk.png
+    - assets/laura.png
+    - assets/matt.png
+    - assets/ryan.png
+    - assets/sirena.png
+    - assets/will.png
 
   fonts:
     - family: Poppins

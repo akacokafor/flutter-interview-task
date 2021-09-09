@@ -30,38 +30,38 @@ class ChatScreen extends StatelessWidget {
                     children: [
                       IconButton(onPressed: () => Navigator.of(context).pop(), icon: Icon(Icons.arrow_back, color: Colors.black,)),
                       SizedBox(
-                    width: SizeConfig.widthMultiplier! * 2
-                  ),
-                  Row(
-                    children: [
-                      CircleAvatar(
-                        radius: SizeConfig.imageSizeMultiplier! * 6,
-                        backgroundColor: Colors.white,
-                        backgroundImage: AssetImage(AppImages.bookAWalk),
+                        width: SizeConfig.widthMultiplier! * 2
                       ),
-                      SizedBox(
-                        width: SizeConfig.widthMultiplier! * 3
-                      ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                      Row(
                         children: [
-                          Text('Alex Murray', style: AppFonts.heading4),
-                          Row(
+                          CircleAvatar(
+                            radius: SizeConfig.imageSizeMultiplier! * 6,
+                            backgroundColor: Colors.white,
+                            backgroundImage: AssetImage(AppImages.bookAWalk),
+                          ),
+                          SizedBox(
+                            width: SizeConfig.widthMultiplier! * 3
+                          ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              CircleAvatar(
-                                radius: SizeConfig.imageSizeMultiplier!,
-                                backgroundColor: Colors.green,
-                              ),
-                              SizedBox(
-                                width: SizeConfig.widthMultiplier! * 2
-                              ),
-                              Text('Online', style: AppFonts.body3)
-                            ],
+                              Text('Alex Murray', style: AppFonts.heading4),
+                              Row(
+                                children: [
+                                  CircleAvatar(
+                                    radius: SizeConfig.imageSizeMultiplier!,
+                                    backgroundColor: Colors.green,
+                                  ),
+                                  SizedBox(
+                                    width: SizeConfig.widthMultiplier! * 2
+                                  ),
+                                  Text('Online', style: AppFonts.body3)
+                                ],
+                              )
+                            ]
                           )
-                        ]
+                        ],
                       )
-                    ],
-                  )
                     ],
                   ),
                   Icon(Icons.call, color: Colors.black,)
