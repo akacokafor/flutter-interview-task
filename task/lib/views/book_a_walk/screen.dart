@@ -34,13 +34,13 @@ class BookAWalkScreen extends StatelessWidget {
                     onTap: () => Navigator.of(context).pop(),
                     child: CircleAvatar(
                       backgroundColor: Colors.grey.shade100.withOpacity(0.5),
-                      radius: SizeConfig.imageSizeMultiplier! * 6,
+                      radius: SizeConfig.imageSizeMultiplier * 1 * 6,
                       child: Icon(Icons.clear, color: Colors.white),
                     ),
                   ),
                   Container(
-                    width: SizeConfig.widthMultiplier! * 30,
-                    height: SizeConfig.heightMultiplier! * 6,
+                    width: SizeConfig.widthMultiplier * 1 * 30,
+                    height: SizeConfig.heightMultiplier * 1 * 6,
                     decoration: BoxDecoration(
                       color: Colors.grey.shade100.withOpacity(0.5),
                       borderRadius: BorderRadius.circular(30)
@@ -53,13 +53,13 @@ class BookAWalkScreen extends StatelessWidget {
                           child: Text('Verified', style: AppFonts.heading3white),
                         ),
                         Container(
-                          width: SizeConfig.widthMultiplier! * 5,
-                          height: SizeConfig.heightMultiplier! * 3,
+                          width: SizeConfig.widthMultiplier * 1 * 5,
+                          height: SizeConfig.heightMultiplier * 1 * 3,
                           decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(5)
                           ),
-                          child: Icon(Icons.check, color: Colors.black54, size: SizeConfig.imageSizeMultiplier! * 4,),
+                          child: Icon(Icons.check, color: Colors.black54, size: SizeConfig.imageSizeMultiplier * 1 * 4,),
                         )
                       ],
                     )
@@ -71,7 +71,7 @@ class BookAWalkScreen extends StatelessWidget {
           Container(
             height: size.height * 0.6,
             width: size.width,
-            padding: EdgeInsets.symmetric(horizontal: size.width * 0.05, vertical: SizeConfig.heightMultiplier!),
+            padding: EdgeInsets.symmetric(horizontal: size.width * 0.05, vertical: SizeConfig.heightMultiplier * 1),
             margin: EdgeInsets.only(top: size.height * 0.46),
             decoration: BoxDecoration(
               color: Colors.white,
@@ -85,7 +85,7 @@ class BookAWalkScreen extends StatelessWidget {
                 children: [
                   Text('Alex Murray', style: AppFonts.heading1,),
                   Padding(
-                    padding: EdgeInsets.only(top: SizeConfig.heightMultiplier! * 1.5),
+                    padding: EdgeInsets.only(top: SizeConfig.heightMultiplier * 1 * 1.5),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -97,7 +97,7 @@ class BookAWalkScreen extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Text('4.4', style: AppFonts.heading4),
-                            Icon(Icons.star, color: Colors.grey.shade500, size: SizeConfig.imageSizeMultiplier! * 4,)
+                            Icon(Icons.star, color: Colors.grey.shade500, size: SizeConfig.imageSizeMultiplier * 1 * 4,)
                           ],
                         ),
                         VerticalDivider(),
@@ -106,7 +106,7 @@ class BookAWalkScreen extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.symmetric(vertical: SizeConfig.heightMultiplier! * 2),
+                    padding: EdgeInsets.symmetric(vertical: SizeConfig.heightMultiplier * 1 * 2),
                     child: Divider(
                       color: Colors.grey.shade500,
                     ),
@@ -120,7 +120,7 @@ class BookAWalkScreen extends StatelessWidget {
                     ]
                   ),
                   SizedBox(
-                    height: SizeConfig.heightMultiplier! * 3,
+                    height: SizeConfig.heightMultiplier * 1 * 3,
                   ),
                   Row(
                     children: [
@@ -132,7 +132,7 @@ class BookAWalkScreen extends StatelessWidget {
                         ],
                       ),
                       SizedBox(
-                        width: SizeConfig.widthMultiplier! * 5,
+                        width: SizeConfig.widthMultiplier * 1 * 5,
                       ),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -144,7 +144,7 @@ class BookAWalkScreen extends StatelessWidget {
                     ]
                   ),
                   SizedBox(
-                    height: SizeConfig.heightMultiplier! * 3,
+                    height: SizeConfig.heightMultiplier * 1 * 3,
                   ),
                   Align(
                     alignment: Alignment.centerLeft,
@@ -160,7 +160,7 @@ class BookAWalkScreen extends StatelessWidget {
                     child: Text('Read more', 
                       style: TextStyle(fontFamily: 'Poppins', color: Colors.red))),
                        SizedBox(
-                    height: SizeConfig.heightMultiplier! * 4,
+                    height: SizeConfig.heightMultiplier * 1 * 4,
                   ),
                   CustomButton(text: 'Check Schedule', onpressed: () {})
                 ],

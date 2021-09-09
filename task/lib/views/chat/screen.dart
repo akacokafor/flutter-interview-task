@@ -17,7 +17,7 @@ class ChatScreen extends StatelessWidget {
       body: Container(
         height: size.height,
         width: size.width,
-        padding: EdgeInsets.only(top: SizeConfig.heightMultiplier! * 6, right: size.width * 0.05, left: size.width * 0.05),
+        padding: EdgeInsets.only(top: SizeConfig.heightMultiplier * 6, right: size.width * 0.05, left: size.width * 0.05),
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -30,17 +30,17 @@ class ChatScreen extends StatelessWidget {
                     children: [
                       IconButton(onPressed: () => Navigator.of(context).pop(), icon: Icon(Icons.arrow_back, color: Colors.black,)),
                       SizedBox(
-                        width: SizeConfig.widthMultiplier! * 2
+                        width: SizeConfig.widthMultiplier * 2
                       ),
                       Row(
                         children: [
                           CircleAvatar(
-                            radius: SizeConfig.imageSizeMultiplier! * 6,
+                            radius: SizeConfig.imageSizeMultiplier * 6,
                             backgroundColor: Colors.white,
                             backgroundImage: AssetImage(AppImages.bookAWalk),
                           ),
                           SizedBox(
-                            width: SizeConfig.widthMultiplier! * 3
+                            width: SizeConfig.widthMultiplier * 3
                           ),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -49,11 +49,11 @@ class ChatScreen extends StatelessWidget {
                               Row(
                                 children: [
                                   CircleAvatar(
-                                    radius: SizeConfig.imageSizeMultiplier!,
+                                    radius: SizeConfig.imageSizeMultiplier * 1,
                                     backgroundColor: Colors.green,
                                   ),
                                   SizedBox(
-                                    width: SizeConfig.widthMultiplier! * 2
+                                    width: SizeConfig.widthMultiplier * 2
                                   ),
                                   Text('Online', style: AppFonts.body3)
                                 ],
@@ -68,7 +68,7 @@ class ChatScreen extends StatelessWidget {
                 ],
               ),
               SizedBox(
-                height: SizeConfig.heightMultiplier! * 5,
+                height: SizeConfig.heightMultiplier * 5,
               ),
               MessageBubble('Hey, Alex! Nice to meet you! I’d like to hire a walker and you’re perfect one for me. Can you help me out?', true, '1 April 12:00'),
               MessageBubble('Hi! That’s great! Let me give you a call and we’ll discuss all the details', false, ''),
@@ -89,7 +89,7 @@ class ChatScreen extends StatelessWidget {
                         child: Icon(Icons.add, color: AppColors.PRIMARY_COLOR)
                       ),
                       SizedBox(
-                        width: SizeConfig.widthMultiplier! * 3,
+                        width: SizeConfig.widthMultiplier * 3,
                       ),
                       CustomInput(
                         width: size.width * 0.7,

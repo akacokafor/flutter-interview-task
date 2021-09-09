@@ -41,7 +41,7 @@ class _DashboardTabViewState extends State<DashboardTabView> {
                           children: [
                             Text('Home', style: AppFonts.heading1),
                             SizedBox(
-                              height: SizeConfig.heightMultiplier!,
+                              height: SizeConfig.heightMultiplier,
                             ),
                             Text('Explore dog walkers', style: AppFonts.body1),
                           ],
@@ -50,7 +50,7 @@ class _DashboardTabViewState extends State<DashboardTabView> {
                       ],
                     ),
                     SizedBox(
-                      height: SizeConfig.heightMultiplier! * 4,
+                      height: SizeConfig.heightMultiplier * 4,
                     ),
                     CustomInput(
                       label: 'Location',
@@ -63,13 +63,13 @@ class _DashboardTabViewState extends State<DashboardTabView> {
                 ),
               ),
               SizedBox(
-                height: SizeConfig.heightMultiplier! * 4,
+                height: SizeConfig.heightMultiplier * 4,
               ),
               Column(
                 children: [
                   CarouselHeader(title: 'Near You', linkText: 'View all',),
                   Padding(
-                    padding: EdgeInsets.only(top: SizeConfig.heightMultiplier! * 2, left: size.width * 0.05),
+                    padding: EdgeInsets.only(top: SizeConfig.heightMultiplier * 2, left: size.width * 0.05),
                     child: CarouselSlider(
                         carouselController: carouselController,
                         options: CarouselOptions(
@@ -89,7 +89,7 @@ class _DashboardTabViewState extends State<DashboardTabView> {
                 ],
               ),
               Padding(
-                padding: EdgeInsets.symmetric(vertical: SizeConfig.heightMultiplier! * 2, horizontal: size.width * 0.05),
+                padding: EdgeInsets.symmetric(vertical: SizeConfig.heightMultiplier * 2, horizontal: size.width * 0.05),
                 child: Divider(
                   color: Colors.grey.shade700,
                 ),
@@ -98,7 +98,7 @@ class _DashboardTabViewState extends State<DashboardTabView> {
                 children: [
                   CarouselHeader(title: 'Suggested', linkText: 'View all',),
                   Padding(
-                    padding: EdgeInsets.only(top: SizeConfig.heightMultiplier! * 2, left: size.width * 0.05),
+                    padding: EdgeInsets.only(top: SizeConfig.heightMultiplier * 2, left: size.width * 0.05),
                     child: CarouselSlider(
                         carouselController: carouselController,
                         options: CarouselOptions(
@@ -119,7 +119,7 @@ class _DashboardTabViewState extends State<DashboardTabView> {
                 ],
               ),
               SizedBox(
-                height: SizeConfig.heightMultiplier! * 4,
+                height: SizeConfig.heightMultiplier * 4,
               ),
             ]
           ),

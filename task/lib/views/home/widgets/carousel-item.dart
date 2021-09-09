@@ -14,7 +14,7 @@ class CarouselItem extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Padding(
-      padding: EdgeInsets.only(right: SizeConfig.widthMultiplier! * 8),
+      padding: EdgeInsets.only(right: SizeConfig.widthMultiplier * 8),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -44,8 +44,8 @@ class CarouselItem extends StatelessWidget {
                 ],
               ),
               Container(
-                height: SizeConfig.heightMultiplier! * 4,
-                width: SizeConfig.widthMultiplier! * 12,
+                height: SizeConfig.heightMultiplier * 4,
+                width: SizeConfig.widthMultiplier * 12,
                 decoration: BoxDecoration(
                   color: Colors.black87,
                   borderRadius: BorderRadius.circular(8)

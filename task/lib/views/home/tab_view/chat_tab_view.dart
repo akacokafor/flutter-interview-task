@@ -27,7 +27,7 @@ class ChatTabView extends StatelessWidget {
               child: Text('Chat', style: AppFonts.heading1),
             ),
             SizedBox(
-              height: SizeConfig.heightMultiplier! * 3,
+              height: SizeConfig.heightMultiplier * 3,
             ),
             Padding(
               padding: EdgeInsets.only(left: size.width * 0.05),
@@ -40,14 +40,14 @@ class ChatTabView extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: SizeConfig.heightMultiplier! * 2,
+              height: SizeConfig.heightMultiplier * 2,
             ),
             Container(
               height: size.height * 0.8,
               width: size.width,
-              padding: EdgeInsets.only(top: SizeConfig.heightMultiplier! * 3),
+              padding: EdgeInsets.only(top: SizeConfig.heightMultiplier * 3),
               child: ListView.builder(
-                  padding: EdgeInsets.only(bottom: SizeConfig.heightMultiplier! * 10),
+                  padding: EdgeInsets.only(bottom: SizeConfig.heightMultiplier * 10),
                   itemCount: chats.length,
                   itemBuilder: (BuildContext context, int index) {
                     Chat chat = chats[index];
@@ -59,9 +59,9 @@ class ChatTabView extends StatelessWidget {
                         ),
                         child: ListTile(
                             minVerticalPadding: 0,
-                            contentPadding: EdgeInsets.symmetric(horizontal: SizeConfig.widthMultiplier! * 5),
+                            contentPadding: EdgeInsets.symmetric(horizontal: SizeConfig.widthMultiplier * 5),
                             leading: CircleAvatar(
-                              radius: SizeConfig.imageSizeMultiplier! * 6,
+                              radius: SizeConfig.imageSizeMultiplier * 6,
                               backgroundColor: Colors.white,
                               backgroundImage: AssetImage(chat.image),
                             ),

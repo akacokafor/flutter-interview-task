@@ -58,8 +58,8 @@ class CustomInput extends StatelessWidget {
               maxLines: maxLines,
               decoration: InputDecoration(
                 contentPadding: EdgeInsets.only(
-                    left: SizeConfig.widthMultiplier! * 4,
-                    right: SizeConfig.widthMultiplier! * 2),
+                    left: SizeConfig.widthMultiplier * 4,
+                    right: SizeConfig.widthMultiplier * 2),
                 errorMaxLines: 1,
                 hintText: hint,
                 prefixIcon: prefixIcon,

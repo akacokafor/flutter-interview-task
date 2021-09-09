@@ -23,7 +23,7 @@ class CarouselHeader extends StatelessWidget {
           Text(title, style: AppFonts.heading1),
           Text(linkText, style: TextStyle(
             decoration: TextDecoration.underline,
-            fontSize: SizeConfig.textMultiplier! * 2.2,
+            fontSize: SizeConfig.textMultiplier * 2.2,
             fontWeight: FontWeight.w400,
             fontFamily: 'Poppins',
             color: Colors.black87,

@@ -28,7 +28,7 @@ class CustomButton extends StatelessWidget {
       ),
       child: MaterialButton(
         elevation: 0,
-        height: SizeConfig.heightMultiplier! * 5,
+        height: SizeConfig.heightMultiplier * 5,
         minWidth:
             width == null ? MediaQuery.of(context).size.width * 0.8 : width,
         splashColor: Colors.white10,
@@ -39,14 +39,14 @@ class CustomButton extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             if(icon != null) Padding(
-              padding: EdgeInsets.only(right: SizeConfig.widthMultiplier!),
+              padding: EdgeInsets.only(right: SizeConfig.widthMultiplier * 1),
               child: icon!
               ),
             Text(
               text,
               style: TextStyle(
                 fontFamily: 'Poppins',
-                fontSize: SizeConfig.textMultiplier! * 2.3,
+                fontSize: SizeConfig.textMultiplier * 2.3,
                 color: Colors.white,
                 fontWeight: FontWeight.w800,
               ),

@@ -85,11 +85,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 children: [
                   Text('Let\'s start here', style: AppFonts.heading1),
                   SizedBox(
-                    height: SizeConfig.heightMultiplier!,
+                    height: SizeConfig.heightMultiplier * 1,
                   ),
                   Text('Fill in your details to begin', style: AppFonts.body1),
                   SizedBox(
-                    height: SizeConfig.heightMultiplier! * 7,
+                    height: SizeConfig.heightMultiplier * 7,
                   ),
                   Form(
                     key: _registerFormKey,
@@ -104,7 +104,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           validator: _nameValidator,
                         ),
                         SizedBox(
-                          height: SizeConfig.heightMultiplier! * 3,
+                          height: SizeConfig.heightMultiplier * 3,
                         ),
                         CustomInput(
                           hint: 'example@gmail.com',
@@ -115,7 +115,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           },
                         ),
                         SizedBox(
-                          height: SizeConfig.textMultiplier! * 3,
+                          height: SizeConfig.textMultiplier * 3,
                         ),
                         CustomInput(
                           obsecure: obsecurePassword,
@@ -140,7 +140,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           validator: _passwordValidator,
                         ),
                         SizedBox(
-                          height: SizeConfig.heightMultiplier! * 4,
+                          height: SizeConfig.heightMultiplier * 4,
                         ),
                         CustomButton(
                           text: 'Sign up',

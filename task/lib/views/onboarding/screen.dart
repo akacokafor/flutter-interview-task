@@ -33,11 +33,11 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               children: [
                 Padding(
                   padding: EdgeInsets.only(left: size.width * 0.05, top: size.height * 0.08),
-                  child: Image.asset(AppImages.logo, fit: BoxFit.cover, height: SizeConfig.imageSizeMultiplier! * 8,),
+                  child: Image.asset(AppImages.logo, fit: BoxFit.cover, height: SizeConfig.imageSizeMultiplier * 8,),
                 ),
                 Container(
                   height: size.height * 0.35,
-                  padding: EdgeInsets.only(bottom: SizeConfig.heightMultiplier!, top: SizeConfig.heightMultiplier!),
+                  padding: EdgeInsets.only(bottom: SizeConfig.heightMultiplier * 1, top: SizeConfig.heightMultiplier * 1),
                   decoration: BoxDecoration(
                     gradient: LinearGradient(
                       begin: Alignment.topCenter,
@@ -46,7 +46,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         Colors.black.withOpacity(0.3)
                       ],
                     ),
-                    // color: Colors.black.withOpacity(0.3)
                   ),
                   child: Column(
                     children: [
@@ -61,7 +60,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         ],
                       ),
                       Container(
-                        padding: EdgeInsets.only(top: SizeConfig.heightMultiplier! * 2),
+                        padding: EdgeInsets.only(top: SizeConfig.heightMultiplier * 2),
                         width: size.width * 0.7,
                         child: Text(
                           'Too tired to walk your dog? \nLet’s help you!', 
@@ -70,7 +69,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         )
                       ),
                       Padding(
-                        padding: EdgeInsets.symmetric(vertical: SizeConfig.heightMultiplier! * 4, horizontal: size.width * 0.05),
+                        padding: EdgeInsets.symmetric(vertical: SizeConfig.heightMultiplier * 4, horizontal: size.width * 0.05),
                         child: CustomButton(
                           text: 'Join Our Community', 
                           width: size.width * 0.8, 
@@ -84,7 +83,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                           Padding(
                             padding: const EdgeInsets.only(left: 8.0),
                             child: Text('Sign in', 
-                            style: TextStyle(color: AppColors.PRIMARY_COLOR, fontSize: SizeConfig.textMultiplier! * 1.9,
+                            style: TextStyle(color: AppColors.PRIMARY_COLOR, fontSize: SizeConfig.textMultiplier * 1.9,
                                 fontWeight: FontWeight.w800,
                                 fontFamily: 'Poppins',)),
                           )

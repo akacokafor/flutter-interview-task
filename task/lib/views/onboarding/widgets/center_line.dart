@@ -10,8 +10,8 @@ class CenterLine extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 3,
-      margin: EdgeInsets.symmetric(horizontal: SizeConfig.widthMultiplier!),
-      width: SizeConfig.widthMultiplier! * 3,
+      margin: EdgeInsets.symmetric(horizontal: SizeConfig.widthMultiplier * 1),
+      width: SizeConfig.widthMultiplier * 3,
       color: Colors.grey.withOpacity(0.4)
     );
   }

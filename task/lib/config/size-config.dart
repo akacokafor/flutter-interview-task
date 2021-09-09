@@ -6,10 +6,10 @@ class SizeConfig {
   static double _blockSizeHorizontal = 0;
   static double _blockSizeVertical = 0;
 
-  static double? textMultiplier;
-  static double? imageSizeMultiplier;
-  static double? heightMultiplier;
-  static double? widthMultiplier;
+  static double textMultiplier = 0;
+  static double imageSizeMultiplier = 0;
+  static double heightMultiplier = 0;
+  static double widthMultiplier = 0;
   static bool isPortrait = true;
   static bool isMobilePortrait = false;
 

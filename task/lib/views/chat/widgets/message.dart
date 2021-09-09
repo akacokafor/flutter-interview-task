@@ -18,7 +18,7 @@ class MessageBubble extends StatelessWidget {
       children: [
         if(isMe)
           Padding(
-            padding: EdgeInsets.only(right: SizeConfig.widthMultiplier! * 30),
+            padding: EdgeInsets.only(right: SizeConfig.widthMultiplier * 30),
             child: Text(time!, style: AppFonts.body1),
           ),
         Row(
@@ -34,12 +34,12 @@ class MessageBubble extends StatelessWidget {
                   bottomRight: isMe ? Radius.circular(0) : Radius.circular(12),
                 ),
               ),
-              width: SizeConfig.widthMultiplier! * 50,
+              width: SizeConfig.widthMultiplier * 50,
               padding: const EdgeInsets.symmetric(
                 horizontal: 16,
                 vertical: 10,
               ),
-              margin: EdgeInsets.symmetric(vertical: SizeConfig.heightMultiplier! * 2, horizontal: 8),
+              margin: EdgeInsets.symmetric(vertical: SizeConfig.heightMultiplier * 2, horizontal: 8),
               child: Text(
                 message,
                 style: TextStyle(

@@ -10,7 +10,7 @@ class VerticalDivider extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Container(
-      height: SizeConfig.heightMultiplier! * 2.5,
+      height: SizeConfig.heightMultiplier * 2.5,
       width: 1,
       margin: EdgeInsets.symmetric(horizontal: size.width * 0.03),
       color: Colors.grey,

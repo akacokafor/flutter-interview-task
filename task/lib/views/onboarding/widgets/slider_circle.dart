@@ -15,7 +15,7 @@ class SliderCircle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CircleAvatar(
-      radius: SizeConfig.imageSizeMultiplier! * 4,
+      radius: SizeConfig.imageSizeMultiplier * 4,
       backgroundColor: color,
       child: Text(
         progressNumber.toString(),
