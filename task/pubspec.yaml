@@ -13,6 +13,8 @@ dependencies:
     sdk: flutter
 
   carousel_slider: ^4.0.0
+  flutter_native_splash:
+  flutter_launcher_icons:
 
 dev_dependencies:
   flutter_test:
@@ -21,7 +23,6 @@ dev_dependencies:
 flutter:
   uses-material-design: true
 
-  # To add assets to your application, add an assets section, like this:
   assets:
     - assets/logo.png
     - assets/onboarding.png
@@ -45,3 +46,13 @@ flutter:
         - asset: assets/fonts/Poppins-Medium.ttf
         - asset: assets/fonts/Poppins-MediumItalic.ttf
         - asset: assets/fonts/Poppins-Regular.ttf
+
+flutter_icons:
+  android: "ic_launcher"
+  ios: true
+  remove_alpha_ios: true
+  image_path: "assets/logo.png"
+
+flutter_native_splash:
+  image: "assets/logo.png"
+  color: "ffffff"
