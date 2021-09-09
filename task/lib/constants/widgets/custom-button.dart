@@ -48,7 +48,7 @@ class CustomButton extends StatelessWidget {
                 fontFamily: 'Poppins',
                 fontSize: SizeConfig.textMultiplier * 2.3,
                 color: Colors.white,
-                fontWeight: FontWeight.w800,
+                fontWeight: FontWeight.w600,
               ),
             ),
           ],

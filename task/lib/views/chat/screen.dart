@@ -7,7 +7,6 @@ import 'package:task/constants/widgets/custom-input.dart';
 import 'package:task/views/chat/widgets/message.dart';
 
 class ChatScreen extends StatelessWidget {
-  static const routeName = '/chat';
   const ChatScreen({ Key? key }) : super(key: key);
 
   @override
@@ -28,9 +27,9 @@ class ChatScreen extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      IconButton(onPressed: () => Navigator.of(context).pop(), icon: Icon(Icons.arrow_back, color: Colors.black,)),
+                      InkWell(onTap: () => Navigator.of(context).pop(), child: Icon(Icons.arrow_back, color: Colors.black,)),
                       SizedBox(
-                        width: SizeConfig.widthMultiplier * 2
+                        width: SizeConfig.widthMultiplier * 4
                       ),
                       Row(
                         children: [

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:task/config/size-config.dart';
 import 'package:task/constants/app-fonts.dart';
 import 'package:task/constants/app-images.dart';
+import 'package:task/constants/app-routes.dart';
 import 'package:task/constants/widgets/custom-button.dart';
 import 'package:task/constants/widgets/custom-input.dart';
 import 'package:task/views/book_a_walk/screen.dart';
@@ -46,7 +47,7 @@ class _DashboardTabViewState extends State<DashboardTabView> {
                             Text('Explore dog walkers', style: AppFonts.body1),
                           ],
                         ),
-                        CustomButton(text: 'Book a Walk', onpressed: () => Navigator.of(context).pushNamed(BookAWalkScreen.routeName), width: size.width * 0.2, icon: Icon(Icons.add, color: Colors.white)),
+                        CustomButton(text: 'Book a Walk', onpressed: () => Navigator.of(context).pushNamed(Routes.BOOK_A_WALK_SCREEN_ROUTE), width: size.width * 0.2, icon: Icon(Icons.add, color: Colors.white)),
                       ],
                     ),
                     SizedBox(

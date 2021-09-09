@@ -3,6 +3,7 @@ import 'package:task/config/size-config.dart';
 import 'package:task/constants/app-colors.dart';
 import 'package:task/constants/app-fonts.dart';
 import 'package:task/constants/app-images.dart';
+import 'package:task/constants/app-routes.dart';
 import 'package:task/constants/widgets/custom-button.dart';
 import 'package:task/views/onboarding/widgets/center_line.dart';
 import 'package:task/views/onboarding/widgets/slider_circle.dart';
@@ -73,7 +74,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         child: CustomButton(
                           text: 'Join Our Community', 
                           width: size.width * 0.8, 
-                          onpressed: () => Navigator.of(context).pushNamed(RegisterScreen.routeName)
+                          onpressed: () => Navigator.of(context).pushNamed(Routes.REGISTER_SCREEN_ROUTE)
                         ),
                       ),
                       Row(

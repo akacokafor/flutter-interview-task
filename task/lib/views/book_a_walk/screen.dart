@@ -7,7 +7,6 @@ import 'package:task/views/book_a_walk/widgets/row_item.dart';
 import 'package:task/views/book_a_walk/widgets/tab_container.dart';
 
 class BookAWalkScreen extends StatelessWidget {
-  static const routeName = '/book-a-walk';
   const BookAWalkScreen({ Key? key }) : super(key: key);
 
   @override

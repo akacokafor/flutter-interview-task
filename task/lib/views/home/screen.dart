@@ -5,7 +5,6 @@ import 'package:task/views/home/tab_view/dashboard_tab_view.dart';
 import 'package:task/views/home/widgets/bottom-nav.dart';
 
 class HomeScreen extends StatefulWidget {
-  static const routeName = 'home';
   const HomeScreen({ Key? key }) : super(key: key);
 
   @override

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:task/config/size-config.dart';
 import 'package:task/constants/app-colors.dart';
 import 'package:task/constants/app-fonts.dart';
+import 'package:task/constants/app-routes.dart';
 import 'package:task/constants/widgets/custom-input.dart';
 import 'package:task/views/chat/screen.dart';
 import 'package:task/views/home/models/chat.dart';
@@ -52,7 +53,7 @@ class ChatTabView extends StatelessWidget {
                   itemBuilder: (BuildContext context, int index) {
                     Chat chat = chats[index];
                     return InkWell(
-                      onTap: () => Navigator.of(context).pushNamed(ChatScreen.routeName),
+                      onTap: () => Navigator.of(context).pushNamed(Routes.CHAT_SCREEN_ROUTE),
                       child: Container(
                         decoration: BoxDecoration(
                           border: Border(top: BorderSide(color: Colors.grey.shade300))

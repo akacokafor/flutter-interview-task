@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:task/config/size-config.dart';
 import 'package:task/constants/app-colors.dart';
 import 'package:task/constants/app-fonts.dart';
+import 'package:task/constants/app-routes.dart';
 import 'package:task/constants/widgets/custom-button.dart';
 import 'package:task/constants/widgets/custom-input.dart';
 import 'package:task/views/home/screen.dart';
 
 class RegisterScreen extends StatefulWidget {
-  static const routeName = 'register';
   const RegisterScreen({ Key? key }) : super(key: key);
 
   @override
@@ -59,7 +59,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
     }
     _registerFormKey.currentState!.save();
     Navigator.of(context).pop();
-    Navigator.of(context).popAndPushNamed(HomeScreen.routeName);
+    Navigator.of(context).popAndPushNamed(Routes.HOME_SCREEN_ROUTE);
   }
 
   @override
