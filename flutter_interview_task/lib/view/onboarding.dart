@@ -1,0 +1,107 @@
+import 'package:flutter/material.dart';
+
+import 'constants.dart';
+import 'signup.dart';
+
+class Onboarding extends StatelessWidget {
+  const Onboarding({Key? key}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return SafeArea(
+      child: Scaffold(
+        body: Stack(
+          children: [
+            Image.asset(
+              "assets/images/onboarding.png",
+              height: double.infinity,
+              fit: BoxFit.cover,
+            ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(16, 50, 258, 495),
+              child: Image.asset(
+                "assets/images/LOGO.png",
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(10, 300, 0, 0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Image.asset(
+                    "assets/images/NUMBERING.png",
+                  ),
+                  const Text(
+                    "Too tired to walk your dog?\n Let's help you!",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 22,
+                        fontWeight: FontWeight.w700),
+                  ),
+                  RoundedButton(
+                    primaryCcolor: primaryCcolor,
+                    onPressed: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const Signup(),
+                      ),
+                    ),
+                    text: "Join our community",
+                  ),
+                  const Text.rich(
+                    TextSpan(
+                      children: [
+                        TextSpan(
+                          text: "Already a member?",
+                          style: TextStyle(color: Colors.white, fontSize: 13),
+                        ),
+                        TextSpan(
+                          text: " Sign in",
+                          style: TextStyle(color: primaryCcolor, fontSize: 13),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class RoundedButton extends StatelessWidget {
+  const RoundedButton({
+    Key? key,
+    required this.primaryCcolor,
+    required this.text,
+    required this.onPressed,
+  }) : super(key: key);
+
+  final Color primaryCcolor;
+  final String text;
+  final Function() onPressed;
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialButton(
+      height: 58,
+      minWidth: 324,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.all(
+          Radius.circular(10),
+        ),
+      ),
+      color: primaryCcolor,
+      onPressed: onPressed,
+      child: Text(
+        text,
+        style: const TextStyle(
+            color: Colors.white, fontSize: 17, fontWeight: FontWeight.bold),
+      ),
+    );
+  }
+}

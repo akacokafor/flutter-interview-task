@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'view/onboarding.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -11,10 +13,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-      ),
-      home: Container(),
+      debugShowCheckedModeBanner: false,
+      title: 'Flutter Interview Task',
+      theme: ThemeData(),
+      home: const Onboarding(),
     );
   }
 }
