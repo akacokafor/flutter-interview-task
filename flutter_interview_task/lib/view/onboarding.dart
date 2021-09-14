@@ -41,13 +41,21 @@ class Onboarding extends StatelessWidget {
                   ),
                   RoundedButton(
                     primaryCcolor: primaryCcolor,
+                    height: 54,
+                    width: 320,
                     onPressed: () => Navigator.push(
                       context,
                       MaterialPageRoute(
                         builder: (context) => const Signup(),
                       ),
                     ),
-                    text: "Join our community",
+                    child: Text(
+                      "Join our community",
+                      style: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 17,
+                          fontWeight: FontWeight.bold),
+                    ),
                   ),
                   const Text.rich(
                     TextSpan(
@@ -74,22 +82,27 @@ class Onboarding extends StatelessWidget {
 }
 
 class RoundedButton extends StatelessWidget {
-  const RoundedButton({
-    Key? key,
-    required this.primaryCcolor,
-    required this.text,
-    required this.onPressed,
-  }) : super(key: key);
+  const RoundedButton(
+      {Key? key,
+      required this.primaryCcolor,
+      required this.child,
+      required this.onPressed,
+      this.height,
+      this.width})
+      : super(key: key);
 
   final Color primaryCcolor;
-  final String text;
+  final double? height;
+  final double? width;
+  final Widget child;
   final Function() onPressed;
 
   @override
   Widget build(BuildContext context) {
-    return MaterialButton(
-      height: 58,
-      minWidth: 324,
+    // ignore: deprecated_member_use
+    return FlatButton(
+      height: height,
+      minWidth: width,
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.all(
           Radius.circular(10),
@@ -97,11 +110,7 @@ class RoundedButton extends StatelessWidget {
       ),
       color: primaryCcolor,
       onPressed: onPressed,
-      child: Text(
-        text,
-        style: const TextStyle(
-            color: Colors.white, fontSize: 17, fontWeight: FontWeight.bold),
-      ),
+      child: child,
     );
   }
 }

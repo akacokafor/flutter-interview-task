@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_interview_task/view/bottomnavBAr.dart';
 import 'package:flutter_interview_task/view/constants.dart';
 import 'package:flutter_interview_task/view/home.dart';
 import 'package:flutter_interview_task/view/onboarding.dart';
@@ -63,11 +64,21 @@ class Signup extends StatelessWidget {
                   sizedBox20,
                   RoundedButton(
                     primaryCcolor: primaryCcolor,
-                    text: 'Sign up',
+                    height: 54,
+                    width: 320,
+                    child: Text(
+                      "Sign up",
+                      style: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 17,
+                          fontWeight: FontWeight.bold),
+                    ),
                     onPressed: () => Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const Home(),
+                        builder: (context) => const BottomNavBAr(
+                          pages: [Home(), Home(), Home(), Home()],
+                        ),
                       ),
                     ),
                   ),
@@ -108,11 +119,15 @@ class RoundedTextField extends StatelessWidget {
     Key? key,
     required this.label,
     required this.obscureText,
+    this.helperText,
     this.suffixIcon,
+    this.prefixIcon,
   }) : super(key: key);
   final String label;
+  final String? helperText;
   final bool obscureText;
   final Widget? suffixIcon;
+  final Widget? prefixIcon;
   @override
   Widget build(BuildContext context) {
     return TextField(
@@ -127,7 +142,10 @@ class RoundedTextField extends StatelessWidget {
         filled: true,
         labelStyle: const TextStyle(color: textGreyColor),
         labelText: label,
+        hintText: helperText,
+        hintStyle: TextStyle(color: textGreyColor),
         suffixIcon: suffixIcon,
+        prefixIcon: prefixIcon,
         fillColor: const Color.fromRGBO(240, 240, 240, 1),
       ),
     );
