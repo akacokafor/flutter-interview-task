@@ -159,7 +159,7 @@ class RoundedTextField extends StatelessWidget {
         labelStyle: const TextStyle(color: textGreyColor),
         labelText: label,
         hintText: helperText,
-        hintStyle: TextStyle(color: textGreyColor),
+        hintStyle: const TextStyle(color: textGreyColor),
         suffixIcon: suffixIcon,
         prefixIcon: prefixIcon,
         fillColor: const Color.fromRGBO(240, 240, 240, 1),
