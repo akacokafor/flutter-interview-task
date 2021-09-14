@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_interview_task/view/constants.dart';
+import 'package:flutter_interview_task/constants.dart';
 import 'package:flutter_interview_task/view/onboarding.dart';
 import 'package:flutter_interview_task/view/signup.dart';
 
@@ -10,50 +10,6 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        // bottomNavigationBar: BottomNavigationBar(
-        //   items: [
-        //     BottomNavigationBarItem(
-        //       icon: Icon(
-        //         Icons.home_filled,
-        //         color: Colors.black,
-        //       ),
-        //       title: Text(
-        //         "Home",
-        //         style: TextStyle(color: Colors.black),
-        //       ),
-        //     ),
-        //     BottomNavigationBarItem(
-        //       icon: Icon(
-        //         Icons.home_filled,
-        //         color: Colors.black,
-        //       ),
-        //       title: Text(
-        //         "Home",
-        //         style: TextStyle(color: Colors.black),
-        //       ),
-        //     ),
-        //     BottomNavigationBarItem(
-        //       icon: Icon(
-        //         Icons.home_filled,
-        //         color: Colors.black,
-        //       ),
-        //       title: Text(
-        //         "Home",
-        //         style: TextStyle(color: Colors.black),
-        //       ),
-        //     ),
-        //     BottomNavigationBarItem(
-        //       icon: Icon(
-        //         Icons.home_filled,
-        //         color: Colors.black,
-        //       ),
-        //       title: Text(
-        //         "Home",
-        //         style: TextStyle(color: Colors.black),
-        //       ),
-        //     ),
-        //   ],
-        // ),
         backgroundColor: Colors.white,
         body: Padding(
           padding: const EdgeInsets.all(20.0),
@@ -106,8 +62,9 @@ class Home extends StatelessWidget {
                   label: '',
                   helperText: "Kiyv, Ukraine",
                   obscureText: false,
-                  prefixIcon: Icon(Icons.location_city),
-                  suffixIcon: Icon(Icons.location_city),
+                  prefixIcon: ImageIcon(
+                    AssetImage("assets/icons/Location.png"),
+                  ),
                 ),
                 sizedBox20,
                 Row(

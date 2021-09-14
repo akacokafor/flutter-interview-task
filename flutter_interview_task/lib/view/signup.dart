@@ -1,8 +1,16 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
-import 'package:flutter_interview_task/view/bottomnavBAr.dart';
-import 'package:flutter_interview_task/view/constants.dart';
+import 'package:flutter_interview_task/widgets/bottomnavBAr.dart';
+import 'package:flutter_interview_task/constants.dart';
 import 'package:flutter_interview_task/view/home.dart';
 import 'package:flutter_interview_task/view/onboarding.dart';
+import 'package:flutter_interview_task/view/profile.dart';
+import 'package:http/http.dart' as http;
+import 'package:http/http.dart';
+
+import 'chat.dart';
+import 'chatting.dart';
 
 class Signup extends StatelessWidget {
   const Signup({Key? key}) : super(key: key);
@@ -66,21 +74,29 @@ class Signup extends StatelessWidget {
                     primaryCcolor: primaryCcolor,
                     height: 54,
                     width: 320,
-                    child: Text(
+                    child: const Text(
                       "Sign up",
-                      style: const TextStyle(
+                      style: TextStyle(
                           color: Colors.white,
                           fontSize: 17,
                           fontWeight: FontWeight.bold),
                     ),
-                    onPressed: () => Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const BottomNavBAr(
-                          pages: [Home(), Home(), Home(), Home()],
-                        ),
-                      ),
-                    ),
+                    onPressed: () async {
+                      Response response = await http.post(
+                          Uri.parse("https://hookb.in/mZZ8pmBdk6ilzXNNzQGp"),
+                          headers: {'Content-Type': 'application/json'});
+                      log(response.statusCode.toString());
+                      if (response.statusCode == 404) {
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const BottomNavBAr(
+                              pages: [Home(), Chatting(), Chat(), Profile()],
+                            ),
+                          ),
+                        );
+                      }
+                    },
                   ),
                 ],
               ),

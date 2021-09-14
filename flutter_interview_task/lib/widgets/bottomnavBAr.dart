@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_interview_task/view/constants.dart';
+import 'package:flutter_interview_task/constants.dart';
 
 class BottomNavBAr extends StatefulWidget {
   const BottomNavBAr({
