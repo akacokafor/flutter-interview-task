@@ -53,6 +53,7 @@ class Signup extends StatelessWidget {
               ),
               sizedBox20,
               Column(
+                // mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   const RoundedTextField(
                     label: "Fullname",
@@ -73,7 +74,7 @@ class Signup extends StatelessWidget {
                   RoundedButton(
                     primaryCcolor: primaryCcolor,
                     height: 54,
-                    width: 320,
+                    width: double.infinity,
                     child: const Text(
                       "Sign up",
                       style: TextStyle(

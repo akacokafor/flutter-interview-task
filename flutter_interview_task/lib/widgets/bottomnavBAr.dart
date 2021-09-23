@@ -31,8 +31,8 @@ class _BottomNavBArState extends State<BottomNavBAr> {
       bottomNavigationBar: BottomNavigationBar(
         showSelectedLabels: true,
         unselectedItemColor: Colors.black,
-        selectedLabelStyle: TextStyle(color: Colors.black),
-        unselectedLabelStyle: TextStyle(color: textGreyColor),
+        selectedLabelStyle:const TextStyle(color: Colors.black),
+        unselectedLabelStyle:const TextStyle(color: textGreyColor),
         showUnselectedLabels: true,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(

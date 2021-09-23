@@ -1,7 +1,7 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_interview_task/constants.dart';
-import 'package:flutter_interview_task/view/onboarding.dart';
+
+import '../constants.dart';
+import 'onboarding.dart';
 
 class Profile extends StatelessWidget {
   const Profile({Key? key}) : super(key: key);
@@ -11,20 +11,18 @@ class Profile extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.white,
-        body: Stack(
-          children: [
-            Padding(
-              padding: const EdgeInsets.fromLTRB(0, 0, 0, 80),
-              child: Image.asset(
+        body: SingleChildScrollView(
+          child: Stack(
+            alignment: Alignment.bottomCenter,
+            children: [
+              Image.asset(
                 "assets/images/image.png",
               ),
-            ),
-            Align(
-              alignment: Alignment.bottomCenter,
-              child: AspectRatio(
-                aspectRatio: 1.2,
+              AspectRatio(
+                aspectRatio: 1.5,
                 child: Container(
-                  child: Column(
+                  child: ListView(
+                    // mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       const Text(
                         "Alex Murray",
@@ -133,25 +131,28 @@ class Profile extends StatelessWidget {
                           ),
                           Padding(
                             padding: const EdgeInsets.all(20.0),
-                            child: RichText(
-                              text: const TextSpan(children: [
-                                TextSpan(
-                                  text:
-                                      "Alex has loved dogs since childhood. He is currently a veterinary student. Visits the dog shelter we...",
-                                  style: TextStyle(color: textGreyColor),
-                                ),
-                                TextSpan(
-                                    text: "\nRead more",
-                                    style: TextStyle(color: primaryCcolor))
-                              ]),
+                            child: Flexible(
+                              child: RichText(
+                                text: const TextSpan(children: [
+                                  TextSpan(
+                                    text:
+                                        "Alex has loved dogs since childhood. He is currently a veterinary student. Visits the dog shelter we...",
+                                    style: TextStyle(color: textGreyColor),
+                                  ),
+                                  TextSpan(
+                                      text: "\nRead more",
+                                      style: TextStyle(color: primaryCcolor))
+                                ]),
+                              ),
                             ),
                           )
                         ],
                       ),
-                      Expanded(
+                      Flexible(
                         child: RoundedButton(
                           onPressed: () {},
                           width: 310,
+                          height: 50,
                           primaryCcolor: primaryCcolor,
                           child: const Text(
                             "Check schedule",
@@ -169,18 +170,8 @@ class Profile extends StatelessWidget {
                       )),
                 ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Image.asset("assets/icons/CLOSE.png"),
-                  Image.asset("assets/icons/VERIFIED.png"),
-                ],
-              ),
-            )
-          ],
+            ],
+          ),
         ),
       ),
     );

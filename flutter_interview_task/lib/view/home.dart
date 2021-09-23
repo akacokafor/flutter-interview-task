@@ -20,45 +20,50 @@ class Home extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "Home",
-                          style: TextStyle(
-                              fontSize: 25, fontWeight: FontWeight.w700),
-                        ),
-                        Text(
-                          "Explore dog walkers",
-                          style: TextStyle(
-                            fontWeight: FontWeight.w500,
-                            color: Color.fromRGBO(176, 176, 176, 1),
-                          ),
-                        ),
-                      ],
-                    ),
-                    RoundedButton(
-                      onPressed: () {},
-                      child: Row(
-                        children: [
-                          Icon(Icons.add, color: Colors.white),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: const [
                           Text(
-                            "Book a walk",
-                            style: const TextStyle(
-                                color: Colors.white,
-                                fontSize: 17,
-                                fontWeight: FontWeight.bold),
+                            "Home",
+                            style: TextStyle(
+                                fontSize: 25, fontWeight: FontWeight.w700),
+                          ),
+                          Text(
+                            "Explore dog walkers",
+                            style: TextStyle(
+                              fontWeight: FontWeight.w500,
+                              color: Color.fromRGBO(176, 176, 176, 1),
+                            ),
                           ),
                         ],
                       ),
-                      height: 40,
-                      // width: 104,
-                      primaryCcolor: primaryCcolor,
+                    ),
+                    Flexible(
+                      child: RoundedButton(
+                        onPressed: () {},
+                        child: Row(
+                          children: const [
+                            Icon(Icons.add, color: Colors.white),
+                            Flexible(
+                              child: Text(
+                                "Book a walk",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 17,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                            )
+                          ],
+                        ),
+                        height: 40,
+                        primaryCcolor: primaryCcolor,
+                      ),
                     )
                   ],
                 ),
                 sizedBox20,
-                RoundedTextField(
+                const RoundedTextField(
                   label: '',
                   helperText: "Kiyv, Ukraine",
                   obscureText: false,
@@ -69,7 +74,7 @@ class Home extends StatelessWidget {
                 sizedBox20,
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
+                  children: const [
                     Text(
                       "Near you",
                       style:
@@ -90,21 +95,31 @@ class Home extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      Image.asset("assets/images/Component9.png"),
+                      Image.asset(
+                        "assets/images/image.png",
+                        height: 200,
+                        width: 300,
+                        fit: BoxFit.fitWidth,
+                      ),
                       sizedBoxW20,
-                      Image.asset("assets/images/Component1.png"),
+                      Image.asset(
+                        "assets/images/onboarding.png",
+                        height: 200,
+                        width: 300,
+                        fit: BoxFit.fitWidth,
+                      ),
                       sizedBoxW20,
                     ],
                   ),
                 ),
                 sizedBox20,
-                Divider(
+                const Divider(
                   color: textGreyColor,
                 ),
                 sizedBox20,
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
+                  children: const [
                     Text(
                       "Near you",
                       style:
@@ -125,9 +140,19 @@ class Home extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      Image.asset("assets/images/Component3.png"),
+                      Image.asset(
+                        "assets/images/j.png",
+                        height: 200,
+                        width: 300,
+                        fit: BoxFit.fitWidth,
+                      ),
                       sizedBoxW20,
-                      Image.asset("assets/images/Component4.png"),
+                      Image.asset(
+                        "assets/images/onboarding.png",
+                        height: 200,
+                        width: 300,
+                        fit: BoxFit.fitWidth,
+                      ),
                       sizedBoxW20,
                     ],
                   ),

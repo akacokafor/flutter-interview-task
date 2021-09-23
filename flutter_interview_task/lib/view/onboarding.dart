@@ -14,7 +14,8 @@ class Onboarding extends StatelessWidget {
             Image.asset(
               "assets/images/onboarding.png",
               height: double.infinity,
-              fit: BoxFit.cover,
+              width: double.infinity,
+              fit: BoxFit.fill,
             ),
             Padding(
               padding: const EdgeInsets.fromLTRB(16, 50, 258, 495),
@@ -24,54 +25,59 @@ class Onboarding extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.fromLTRB(10, 300, 0, 0),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Image.asset(
-                    "assets/images/NUMBERING.png",
-                  ),
-                  const Text(
-                    "Too tired to walk your dog?\n Let's help you!",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 22,
-                        fontWeight: FontWeight.w700),
-                  ),
-                  RoundedButton(
-                    primaryCcolor: primaryCcolor,
-                    height: 54,
-                    width: 320,
-                    onPressed: () => Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const Signup(),
+              child: Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Image.asset(
+                      "assets/images/NUMBERING.png",
+                    ),
+                    const Text(
+                      "Too tired to walk your dog?\n Let's help you!",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 22,
+                          fontWeight: FontWeight.w700),
+                    ),
+                    Flexible(
+                      child: RoundedButton(
+                        primaryCcolor: primaryCcolor,
+                        height: 54,
+                        width: 320,
+                        onPressed: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const Signup(),
+                          ),
+                        ),
+                        child: const Text(
+                          "Join our community",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 17,
+                              fontWeight: FontWeight.bold),
+                        ),
                       ),
                     ),
-                    child: Text(
-                      "Join our community",
-                      style: const TextStyle(
-                          color: Colors.white,
-                          fontSize: 17,
-                          fontWeight: FontWeight.bold),
+                    const Text.rich(
+                      TextSpan(
+                        children: [
+                          TextSpan(
+                            text: "Already a member?",
+                            style: TextStyle(color: Colors.white, fontSize: 13),
+                          ),
+                          TextSpan(
+                            text: " Sign in",
+                            style:
+                                TextStyle(color: primaryCcolor, fontSize: 13),
+                          ),
+                        ],
+                      ),
                     ),
-                  ),
-                  const Text.rich(
-                    TextSpan(
-                      children: [
-                        TextSpan(
-                          text: "Already a member?",
-                          style: TextStyle(color: Colors.white, fontSize: 13),
-                        ),
-                        TextSpan(
-                          text: " Sign in",
-                          style: TextStyle(color: primaryCcolor, fontSize: 13),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             )
           ],
